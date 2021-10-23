@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../../../assets/img/header-logo.svg';
+import Logo from '../../logo/logo';
 import cart from '../../../assets/img/cart.svg';
 import pin from '../../../assets/img/pin.svg';
 import search from '../../../assets/img/search.svg';
@@ -37,9 +37,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <nav className={styles.nav}>
-          <Link to="/">
-            <img src={logo} width="67" height="70" alt="Логотип Guitar Shop"/>
-          </Link>
+          <Logo/>
           <ul className={styles.site_menu}>
             {
               links.map((link) => (

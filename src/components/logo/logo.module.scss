@@ -1,0 +1,15 @@
+@import "src/assets/styles/variables.scss";
+
+.logo {
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &_active {
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+}

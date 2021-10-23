@@ -1,0 +1,196 @@
+@import "src/assets/styles/variables.scss";
+@import "src/assets/styles/mixins.scss";
+
+.footer {
+  padding: 60px 0 64px;
+  background-color: $footer-grey;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: -90px;
+    left: 73px;
+    width: 894px;
+    height: 298px;
+    transform: rotate(180deg);
+    background-image: url("../../assets/img/guitar-back.png");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: -16px;
+    width: 100%;
+    height: 6px;
+    background-color: $footer-grey;
+  }
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.social {
+  width: 152px;
+}
+
+.social_list {
+  @include list-style-none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 53px;
+}
+
+.social_item {
+  &:not(:last-child) {
+    margin-right: 22px;
+  }
+}
+
+.link {
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 470px;
+  width: 100%;
+  padding-top: 7px;
+}
+
+.about_us {
+  max-width: 140px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.list {
+  @include list-style-none;
+}
+
+.about_us_item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.catalog_link,
+.info_link {
+  letter-spacing: 1.2px;
+  line-height: 20px;
+  font-size: 10px;
+  color: $basic-white;
+}
+
+.title {
+  font-family: $regular-font;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 44px;
+  font-weight: 400;
+  color: $basic-white;
+  opacity: 0.7;
+}
+
+.description {
+  margin: 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: $basic-white;
+  letter-spacing: 0.2px;
+}
+
+.catalog,
+.info {
+  max-width: 145px;
+  width: 100%;
+  margin-right: 18px;
+}
+
+.info {
+  margin: 0;
+}
+
+.contacts {
+  max-width: 140px;
+  padding: 7px 13px 0 0;
+}
+
+.contacts_item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.address {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $basic-white;
+  letter-spacing: 1.3px;
+}
+
+.tel {
+  position: relative;
+  padding-left: 23px;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $basic-white;
+  letter-spacing: 1.3px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../assets/img/phone.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.clock {
+  margin: 0;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  color: $basic-white;
+  letter-spacing: 1.3px;
+
+  span {
+    position: relative;
+    display: block;
+    padding-left: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      top: 0;
+      background-image: url("../../assets/img/clock.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
