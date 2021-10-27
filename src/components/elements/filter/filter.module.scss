@@ -1,0 +1,80 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.title {
+  font-family: $bold-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+
+  margin: 0 0 27px 0;
+}
+
+.fieldset {
+  margin: 0;
+  border: none;
+  padding: 0 0 30px 0;
+}
+
+.legend {
+  width: 100%;
+  margin-bottom: 24px;
+  padding-top: 30px;
+
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 700;
+
+  border-top: 0.7px solid $border-grey;
+}
+
+.price_list {
+  @include list-style-none;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price_item {
+  position: relative;
+  max-width: 84px;
+  width: 100%;
+
+  &:first-child {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -25px;
+      width: 14px;
+      height: 0.7px;
+      border: 0.5px solid $third-grey;
+    }
+  }
+}
+
+.price_input {
+  position: relative;
+  @include link-hover-effect;
+
+  width: 100%;
+  padding: 4px 10px 5px;
+
+  font-size: 15px;
+  line-height: 10px;
+  text-align: center;
+  border: 0.7px solid $third-grey;
+  border-radius: 2px;
+
+}
+
+.checkbox_list {
+  @include list-style-none;
+}
+
+.checkbox_item {
+  &:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}

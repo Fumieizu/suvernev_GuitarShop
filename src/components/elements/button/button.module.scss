@@ -1,0 +1,50 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-weight: 700;
+
+  cursor: pointer;
+  letter-spacing: 1px;
+
+  color: $basic-white;
+  border: none;
+  border-radius: 2px;
+
+  transition: 0.5s;
+
+  &__img {
+    width: 87px;
+    height: 22px;
+    padding-left: 22px;
+    background: url("../../../assets/img/button-cart.svg") 10px center no-repeat;
+  }
+}
+
+.white {
+  @include link-hover-effect;
+
+  background-color: transparent;
+  color: $secondary-black;
+  border: 1px solid $secondary-black;
+}
+
+
+.grey {
+  background-color: $button-grey;
+
+  &:hover {
+    background-color: $secondary-black;
+  }
+}
+
+.orange {
+  @include link-hover-effect;
+
+  background-color: $basic-orange;
+}

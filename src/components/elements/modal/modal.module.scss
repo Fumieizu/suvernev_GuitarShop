@@ -1,0 +1,101 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+.modal {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(#9b9a9a, 0.5);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 740px;
+  height: 230px;
+  padding: 30px 50px 32px 50px;
+  border-radius: 2px;
+
+  animation: bounce 0.5s;
+
+  background-color: $basic-white;
+
+  &__second {
+    height: 185px;
+    padding-bottom: 54px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 22px;
+  right: 23px;;
+  width: 12px;
+  height: 12px;
+
+  background: url('../../../assets/img/close.svg');
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.title {
+  margin: 0 0 39px 0;
+
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 0.7px;
+  color: $secondary-grey;
+}
+
+.controls {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.button {
+  margin-left: auto;
+  width: 220px;
+  height: 46px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+
+  &__left {
+    margin-right: 37px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  30% {
+    transform: translate(-50%, -280px);
+  }
+
+  60% {
+    transform: translate(-50%, -40px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

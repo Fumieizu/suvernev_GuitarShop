@@ -1,5 +1,5 @@
-@import "src/assets/styles/variables.scss";
-@import "src/assets/styles/mixins.scss";
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
 
 .footer {
   padding: 60px 0 64px;
@@ -11,11 +11,11 @@
     position: absolute;
     z-index: -2;
     top: -90px;
-    left: 73px;
+    left: 19px;
     width: 894px;
     height: 298px;
     transform: rotate(180deg);
-    background-image: url("../../assets/img/guitar-back.png");
+    background-image: url("../../../assets/img/guitar-back.png");
     background-repeat: no-repeat;
   }
 
@@ -58,13 +58,7 @@
 }
 
 .link {
-  &:hover, &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.8;
-  }
+  @include link-hover-effect;
 }
 
 .wrapper {
@@ -93,6 +87,8 @@
 
 .catalog_link,
 .info_link {
+  @include link-hover-effect;
+
   letter-spacing: 1.2px;
   line-height: 20px;
   font-size: 10px;
@@ -145,10 +141,13 @@
   line-height: 12px;
   font-weight: 400;
   color: $basic-white;
+  font-style: normal;
   letter-spacing: 1.3px;
 }
 
 .tel {
+  @include link-hover-effect;
+
   position: relative;
   padding-left: 23px;
   font-size: 10px;
@@ -164,7 +163,7 @@
     top: 0;
     width: 10px;
     height: 10px;
-    background-image: url("../../assets/img/phone.svg");
+    background-image: url("../../../assets/img/phone.svg");
     background-repeat: no-repeat;
   }
 }
@@ -189,7 +188,7 @@
       height: 10px;
       left: 0;
       top: 0;
-      background-image: url("../../assets/img/clock.svg");
+      background-image: url("../../../assets/img/clock.svg");
       background-repeat: no-repeat;
     }
   }

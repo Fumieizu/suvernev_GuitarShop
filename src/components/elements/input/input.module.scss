@@ -1,0 +1,46 @@
+@import "src/assets/styles/variables.scss";
+@import "src/assets/styles/mixins.scss";
+
+.label {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+}
+
+.span {
+  @include link-hover-effect;
+
+  position: relative;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid $third-grey;
+    border-radius: 2px;
+  }
+}
+
+.input:checked + .span:before {
+  background: url('../../../assets/img/check-mark.svg') center no-repeat;
+}
+
+.input:disabled + .span:before {
+  cursor: auto;
+  color: $disabled-grey;
+  background: $disabled-background-grey;
+  border: 0.7px solid $disabled-grey;
+}
+
+.input:focus + span {
+  outline: 3px solid $basic-black;
+}

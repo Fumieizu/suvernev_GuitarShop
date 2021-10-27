@@ -1,0 +1,78 @@
+@import "src/assets/styles/variables.scss";
+@import "src/assets/styles/mixins.scss";
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 0 173px 0;
+}
+
+.title {
+  margin:0 0 9px 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 2px;
+}
+
+.description {
+  margin: 0 0 20px 0;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1px;
+}
+
+.form {
+  position: relative;
+  display: flex;
+}
+
+.input {
+  width: 170px;
+  height: 36px;
+  margin-right: 33px;
+  padding: 10px 24px;
+
+  font-size: 16px;
+  line-height: 15px;
+  border: 1px solid $border-grey;
+}
+
+.button {
+  width: 200px;
+  height: 36px;
+  padding: 10px 20px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 15px;
+  letter-spacing: 1px;
+
+  &__order {
+    width: 220px;
+  }
+}
+
+.price {
+  margin: 0 0 44px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 15px;
+  letter-spacing: 2px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.error {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+
+  color: $basic-red;
+  font-size: 14px;
+}

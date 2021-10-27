@@ -1,11 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Logo from '../../logo/logo';
+import Logo from '../logo/logo';
 import cart from '../../../assets/img/cart.svg';
 import pin from '../../../assets/img/pin.svg';
 import search from '../../../assets/img/search.svg';
 import {AppRoute} from '../../../const';
 import styles from './header.module.scss';
+import {useSelector} from 'react-redux';
+import {selectCart} from '../../../store/selectors';
 
 const links = [
   'Каталог',
@@ -33,6 +35,8 @@ const userMenuLinks = [
 ];
 
 export default function Header() {
+  const cartCount = useSelector(selectCart);
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -54,9 +58,9 @@ export default function Header() {
               userMenuLinks.map(({alt, img, link}) => (
                 <li key={alt} className={styles.user_menu_item}>
                   <Link to={link}>
-                    <img src={img} alt={alt}/>
+                    <img src={img} width="16" height="18" alt={alt}/>
                   </Link>
-                  {alt === 'Cart' && <span className={styles.cart_count}>0</span>}
+                  {alt === 'Cart' && <span className={styles.cart_count}>{cartCount.length}</span>}
                 </li>
               ))
             }

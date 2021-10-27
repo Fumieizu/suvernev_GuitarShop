@@ -1,0 +1,66 @@
+@import "src/assets/styles/variables.scss";
+@import "src/assets/styles/mixins.scss";
+
+.sort {
+  display: flex;
+  align-items: center;
+
+  letter-spacing: 1.2px;
+
+  padding: 2px 13px 0 0;
+}
+
+.title {
+  margin: 0 19px 0 0;
+}
+
+.list {
+  @include list-style-none;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  opacity: 0.5;
+
+  &:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  &__active {
+    opacity: 1;
+  }
+}
+
+.direction_list {
+  @include list-style-none;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: auto;
+}
+
+.direction_item {
+  cursor: pointer;
+  opacity: 0.5;
+
+  width: 14px;
+  height: 11px;
+
+  background: url("../../../assets/img/sort-dir.svg") no-repeat;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__reverse {
+    transform: rotate(180deg);
+  }
+
+  &__active {
+    opacity: 1;
+  }
+}
+

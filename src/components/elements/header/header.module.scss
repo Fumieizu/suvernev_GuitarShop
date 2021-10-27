@@ -8,13 +8,11 @@
   min-height: 110px;
   padding: 18px 0;
 
-  margin-bottom: 218px;
-
   &::before {
     content: "";
     position: absolute;
     top: 72px;
-    right: 68px;
+    right: 15px;
     width: 894px;
     height: 298px;
     background-image: url("../../../assets/img/guitar-back.png");

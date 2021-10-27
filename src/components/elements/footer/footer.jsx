@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../logo/logo';
-import twitter from  '../../assets/img/twitter.svg';
-import inst from '../../assets/img/inst.svg';
-import facebook from '../../assets/img/facebook.svg';
+import twitter from '../../../assets/img/twitter.svg';
+import inst from '../../../assets/img/inst.svg';
+import facebook from '../../../assets/img/facebook.svg';
 import styles from './footer.module.scss';
 
 const aboutUsText = [
@@ -52,7 +52,7 @@ export default function Footer() {
             {socials.map(({img, alt}) => (
               <li className={styles.social_item} key={alt}>
                 <Link className={styles.link} to="/">
-                  <img src={img} alt={alt}/>
+                  <img src={img} width="24" height="24" alt={alt}/>
                 </Link>
               </li>
             ))}
