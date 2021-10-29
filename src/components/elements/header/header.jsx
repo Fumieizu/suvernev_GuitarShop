@@ -58,7 +58,7 @@ export default function Header() {
               userMenuLinks.map(({alt, img, link}) => (
                 <li key={alt} className={styles.user_menu_item}>
                   <Link to={link}>
-                    <img src={img} width="16" height="18" alt={alt}/>
+                    <img src={img} width="14" height="17" alt={alt}/>
                   </Link>
                   {alt === 'Cart' && <span className={styles.cart_count}>{cartCount.length}</span>}
                 </li>
