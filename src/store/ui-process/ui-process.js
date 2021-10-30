@@ -1,32 +1,20 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {articles} from '../mock';
 import {
-  changeSortDirection,
-  changeSort,
-  addActiveArticle,
-  changeGuitarCount,
-  deleteFromCart,
-  deleteFromTotal,
-  addToCart,
-  addToCartCount,
-  addPriceTo,
   addPriceFrom,
+  addPriceTo,
   addStringsCount,
-  addTypes
-} from './actions';
-import {
-  findId,
-  changeCount,
-  deleteId,
-  addNewId,
-  addNewCount
-} from '../utils';
+  addToCartCount,
+  addTypes,
+  changeGuitarCount,
+  changeSort,
+  changeSortDirection,
+  deleteFromTotal
+} from '../actions';
+import {addNewCount, changeCount, deleteId} from '../../utils';
 
-const initialState  = {
-  articles: articles,
-  activeArticle: '',
+const initialState = {
   sorting: '',
-  sortDirection: 'вверх',
+  sortDirection: '',
   strings: [],
   types: [],
   price: {
@@ -34,19 +22,15 @@ const initialState  = {
     to: '',
     total: [],
   },
-  cart: [],
 };
 
-const reducer = createReducer(initialState, (builder) => {
+const uiProcess = createReducer(initialState, (builder) => {
   builder
     .addCase(changeSortDirection, (state, action) => {
       state.sortDirection = action.payload;
     })
     .addCase(changeSort, (state, action) => {
       state.sorting = action.payload;
-    })
-    .addCase(addActiveArticle, (state, action) => {
-      state.activeArticle = findId(state.articles, action.payload);
     })
     .addCase(addPriceTo, (state, action) => {
       state.price.to = action.payload;
@@ -60,21 +44,15 @@ const reducer = createReducer(initialState, (builder) => {
     .addCase(addTypes, (state, action) => {
       state.types = action.payload;
     })
-    .addCase(addToCart, (state, action) => {
-      state.cart = addNewId(action.payload, state.cart);
-    })
     .addCase(addToCartCount, (state, action) => {
       state.price.total = addNewCount(action.payload, state.price.total);
     })
     .addCase(changeGuitarCount, (state, action) => {
       state.price.total = changeCount(action.payload, state.price.total);
     })
-    .addCase(deleteFromCart, (state, action) => {
-      state.cart = deleteId(action.payload, state.cart);
-    })
     .addCase(deleteFromTotal, (state, action) => {
       state.price.total = deleteId(action.payload, state.price.total);
     });
 });
 
-export default reducer;
+export {uiProcess};

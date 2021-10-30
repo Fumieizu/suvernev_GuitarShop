@@ -3,7 +3,7 @@ import Input from '../input/input';
 import {priceInputs, typesState, stringsState} from '../../../const';
 import styles from './filter.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
-import {selectArticles} from '../../../store/selectors';
+import {selectArticles} from '../../../store/catalog/selectors';
 import {addPriceFrom, addPriceTo, addStringsCount, addTypes} from '../../../store/actions';
 
 export default function Filter() {

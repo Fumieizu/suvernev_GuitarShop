@@ -1,6 +1,3 @@
-import electricGuitar from './assets/img/electric-guitar.png';
-import ukulele from './assets/img/ukulele .png';
-import acousticGuitar from './assets/img/acoustic-guitar.png';
 import {randomInteger} from './utils';
 
 
@@ -14,7 +11,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 17500,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 2,
@@ -25,7 +22,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 29500,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 3,
@@ -36,7 +33,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 6800,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 4,
@@ -47,7 +44,7 @@ export const articles = [
     strings: 6,
     rating: randomInteger(1, 4),
     price: 30000,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 5,
@@ -58,7 +55,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 3500,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 6,
@@ -69,7 +66,7 @@ export const articles = [
     strings: 6,
     rating: randomInteger(1, 4),
     price: 15300,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 7,
@@ -80,7 +77,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 2200,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 8,
@@ -91,7 +88,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 30000,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 9,
@@ -102,7 +99,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 1700,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 10,
@@ -113,7 +110,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 23000,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 11,
@@ -124,7 +121,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 18700,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 12,
@@ -135,7 +132,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 35000,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 13,
@@ -146,7 +143,7 @@ export const articles = [
     strings: 6,
     rating: randomInteger(1, 4),
     price: 14900,
-    img: electricGuitar,
+    img: `${process.env.PUBLIC_URL}images/electric-guitar.png`,
   },
   {
     id: 14,
@@ -157,7 +154,7 @@ export const articles = [
     strings: 6,
     rating: randomInteger(1, 4),
     price: 7600,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 15,
@@ -168,7 +165,7 @@ export const articles = [
     strings: 6,
     rating: randomInteger(1, 4),
     price: 6500,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 16,
@@ -179,7 +176,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 12000,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 17,
@@ -190,7 +187,7 @@ export const articles = [
     strings: 7,
     rating: randomInteger(1, 4),
     price: 9900,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 18,
@@ -201,7 +198,7 @@ export const articles = [
     strings: 12,
     rating: randomInteger(1, 4),
     price: 8900,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 19,
@@ -212,7 +209,7 @@ export const articles = [
     strings: 12,
     rating: randomInteger(1, 4),
     price: 10500,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 20,
@@ -223,7 +220,7 @@ export const articles = [
     strings: 6,
     rating: randomInteger(1, 4),
     price: 13300,
-    img: acousticGuitar,
+    img: `${process.env.PUBLIC_URL}images/acoustic-guitar.png`,
   },
   {
     id: 21,
@@ -234,7 +231,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 4800,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 22,
@@ -245,7 +242,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 1900,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 23,
@@ -256,7 +253,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 2500,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 24,
@@ -267,7 +264,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 3800,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 25,
@@ -278,7 +275,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 4100,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 26,
@@ -289,7 +286,7 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 2700,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
   {
     id: 27,
@@ -300,6 +297,6 @@ export const articles = [
     strings: 4,
     rating: randomInteger(1, 4),
     price: 6700,
-    img: ukulele,
+    img: `${process.env.PUBLIC_URL}images/ukulele.png`,
   },
 ];

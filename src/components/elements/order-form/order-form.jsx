@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './order-form.module.scss';
 import {useSelector} from 'react-redux';
-import {selectTotalPrice} from '../../../store/selectors';
+import {selectTotalPrice} from '../../../store/ui-process/selectors';
 import Button from '../button/button';
 import Input from '../input/input';
 import {makeNumberToString} from '../../../utils';

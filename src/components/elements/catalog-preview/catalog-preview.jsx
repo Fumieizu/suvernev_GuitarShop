@@ -3,7 +3,7 @@ import Sort from '../sort/sort';
 import ArticleList from '../article-list/article-list';
 import Pagination from '../../pagination/pagination';
 import {useSelector} from 'react-redux';
-import {selectSortingArticles} from '../../../store/selectors';
+import {selectSortingArticles} from '../../../store/catalog/selectors';
 
 const INIT_PAGE = 1;
 const MAX_ARTICLE_COUNT = 9;

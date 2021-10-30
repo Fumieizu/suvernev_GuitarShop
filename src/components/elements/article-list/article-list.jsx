@@ -6,7 +6,7 @@ import {useRouteMatch} from 'react-router-dom';
 import {AppRoute} from '../../../const';
 import CartArticle from '../cart-article/cart-article';
 import {useSelector} from 'react-redux';
-import {selectCart} from '../../../store/selectors';
+import {selectCart} from '../../../store/cart/selectors';
 import articleProps from '../article/article.props';
 
 export default function ArticleList({articles}) {

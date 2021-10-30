@@ -3,7 +3,7 @@ import styles from './sort.module.scss';
 import {SortOptions,SortButtons} from '../../../const';
 import {useDispatch, useSelector} from 'react-redux';
 import {changeSort,changeSortDirection} from '../../../store/actions';
-import {selectSort, selectSortDirection} from '../../../store/selectors';
+import {selectSort, selectSortDirection} from '../../../store/ui-process/selectors';
 
 export default function Sort() {
   const activeType = useSelector(selectSort);

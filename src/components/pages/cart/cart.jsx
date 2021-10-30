@@ -7,7 +7,7 @@ import ArticleList from '../../elements/article-list/article-list';
 import OrderForm from '../../elements/order-form/order-form';
 import EmptyCart from '../../elements/empty-cart/empty-cart';
 import {useSelector} from 'react-redux';
-import {selectCart} from '../../../store/selectors';
+import {selectCart} from '../../../store/cart/selectors';
 
 export default function Cart() {
   const article = useSelector(selectCart);

@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react';
 import styles from './modal.module.scss';
 import PropTypes from 'prop-types';
-import {selectActiveArticle} from '../../../store/selectors';
+import {selectActiveArticle} from '../../../store/catalog/selectors';
 import {useDispatch, useSelector} from 'react-redux';
 import CartArticle from '../cart-article/cart-article';
 import {addToCart, addToCartCount} from '../../../store/actions';
@@ -20,11 +20,11 @@ export default function Modal({setModalOpen, modalOpen}) {
   const [firstPopupState, setFirstPopupState] = useState(true);
   const [secondPopupState, setSecondPopupState] = useState(false);
 
-  const handleCloseModalClick = () => {
+  const onCloseModalClick = () => {
     setModalOpen(false);
   };
 
-  const handleAddToCartClick = () => {
+  const onAddToCartClick = () => {
     setFirstPopupState(false);
     setSecondPopupState(true);
     dispatch(addToCart(article));
@@ -46,14 +46,14 @@ export default function Modal({setModalOpen, modalOpen}) {
       contentLabel={'Добавить в корзину'}
       className={`${styles.content} ${secondPopupState ? styles.content__second : ''}`}
       overlayClassName={styles.modal}
-      onRequestClose={handleCloseModalClick}
+      onRequestClose={onCloseModalClick}
       onAfterOpen={handleAfterOpen}
       onAfterClose={handleAfterClose}
     >
       <section>
         <button
           className={styles.close}
-          onClick={handleCloseModalClick}
+          onClick={onCloseModalClick}
           ref={buttonRef}
           type="button"
         />
@@ -66,8 +66,8 @@ export default function Modal({setModalOpen, modalOpen}) {
               <CartArticle
                 popup
                 info={article}
-                handleAddToCartClick={handleAddToCartClick}
-                handleCloseModalClick={handleCloseModalClick}
+                onAddToCartClick={onAddToCartClick}
+                onCloseModalClick={onCloseModalClick}
               />
             </>
         }
@@ -82,7 +82,7 @@ export default function Modal({setModalOpen, modalOpen}) {
                 <Button
                   white
                   className={styles.button}
-                  onClick={handleCloseModalClick}
+                  onClick={onCloseModalClick}
                 >
                   Продолжить покупки
                 </Button>

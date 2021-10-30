@@ -63,3 +63,9 @@ export const PromoCodes = {
   SUPERGITARA: 'SUPERGITARA',
   GITARA2020: 'GITARA2020',
 };
+
+export const NameSpace = {
+  CATALOG: 'CATALOG',
+  PROCESS: 'PROCESS',
+  CART: 'CART',
+};

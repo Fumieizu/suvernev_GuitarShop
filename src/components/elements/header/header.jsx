@@ -7,7 +7,7 @@ import search from '../../../assets/img/search.svg';
 import {AppRoute} from '../../../const';
 import styles from './header.module.scss';
 import {useSelector} from 'react-redux';
-import {selectCart} from '../../../store/selectors';
+import {selectCart} from '../../../store/cart/selectors';
 
 const links = [
   'Каталог',

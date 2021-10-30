@@ -10,7 +10,7 @@ import Button from '../button/button';
 import Input from '../input/input';
 import Modal from '../modal/modal';
 import {addActiveArticle, changeGuitarCount, deleteFromCart, deleteFromTotal} from '../../../store/actions';
-import {selectTotal} from '../../../store/selectors';
+import {selectTotal} from '../../../store/ui-process/selectors';
 
 const CartImgSize = {
   WIDTH: '48',
@@ -25,7 +25,7 @@ const PopupImgSize = {
 const MAX_COUNT = 10;
 const MIN_COUNT = 1;
 
-export default function CartArticle({info, popup, handleAddToCartClick, handleCloseModalClick}) {
+export default function CartArticle({info, popup, onAddToCartClick, onCloseModalClick}) {
   const {id, name, price, img, type, strings, article} = info;
   const totalPrice = useSelector(selectTotal);
   const dispatch = useDispatch();
@@ -36,6 +36,7 @@ export default function CartArticle({info, popup, handleAddToCartClick, handleCl
   const [modalOpen, setModalOpen] = useState(false);
   const isCart = !popup;
   const imageWidth = (isCart && CartImgSize) || (popup && PopupImgSize);
+
 
   useEffect(() => {
     dispatch(changeGuitarCount({id: id, price: price, count: guitarCount}));
@@ -86,7 +87,7 @@ export default function CartArticle({info, popup, handleAddToCartClick, handleCl
     }
   };
 
-  const deleteArticleFromCart = () => {
+  const onDeleteArticleFromCart = () => {
     dispatch(deleteFromCart(info));
     dispatch(deleteFromTotal(info));
   };
@@ -128,7 +129,7 @@ export default function CartArticle({info, popup, handleAddToCartClick, handleCl
       <Button
         className={styles.buy}
         orange
-        onClick={path === AppRoute.CART ? deleteArticleFromCart : handleAddToCartClick}
+        onClick={path === AppRoute.CART ? onDeleteArticleFromCart : onAddToCartClick}
       >
         {path === AppRoute.CART ? 'Удалить товар?' : 'Добавить в корзину'}
       </Button>
@@ -138,7 +139,7 @@ export default function CartArticle({info, popup, handleAddToCartClick, handleCl
             white
             to={AppRoute.CATALOG}
             className={styles.buy}
-            onClick={handleCloseModalClick}
+            onClick={onCloseModalClick}
           >
             Продолжить покупки
           </Button>
@@ -153,7 +154,7 @@ export default function CartArticle({info, popup, handleAddToCartClick, handleCl
         <button
           className={styles.close}
           type="button"
-          onClick={deleteArticleFromCart}
+          onClick={onDeleteArticleFromCart}
         />
       }
       <div className={`${styles.img} ${popup ? styles.img__popup : ''}`}>
@@ -180,8 +181,8 @@ export default function CartArticle({info, popup, handleAddToCartClick, handleCl
 }
 
 CartArticle.propTypes = {
-  handleCloseModalClick: PropTypes.func,
-  handleAddToCartClick: PropTypes.func,
+  onCloseModalClick: PropTypes.func,
+  onAddToCartClick: PropTypes.func,
   popup: PropTypes.bool,
   info: articleProps,
 };
