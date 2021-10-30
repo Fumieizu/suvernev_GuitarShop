@@ -1,5 +1,10 @@
 import {SortButtons} from './const';
 
+const MAX_PERCENTAGE = 100;
+const MAX_RATING = 5;
+
+export const getRatingPercentage = (rating) => rating * MAX_PERCENTAGE / MAX_RATING;
+
 export const randomInteger = (min, max) => {
   const rand = min + Math.random() * (max + 1 - min);
   return rand.toFixed(1);
