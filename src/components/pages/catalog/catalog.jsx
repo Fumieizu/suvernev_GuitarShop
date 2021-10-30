@@ -13,6 +13,7 @@ export default function Catalog() {
       <main className={styles.container}>
         <PageTitle/>
         <section className={styles.catalog}>
+          <h2 className="visually-hidden">Ассортимент товаров</h2>
           <Filter/>
           <CatalogPreview/>
         </section>

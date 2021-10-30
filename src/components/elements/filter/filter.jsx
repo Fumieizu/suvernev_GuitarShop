@@ -153,7 +153,7 @@ export default function Filter() {
   return (
     <section>
       <h2 className={styles.title}>Фильтр</h2>
-      <form action="" method="post">
+      <form>
         <fieldset className={styles.fieldset}>
           <legend className={styles.legend}>Цена, ₽</legend>
           <ul className={styles.price_list}>
