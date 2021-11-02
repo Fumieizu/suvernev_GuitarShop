@@ -42,7 +42,13 @@ export default function PageTitle() {
       <ul className={styles.breadcrumbs_list}>
         {pageLink.map(({text, link}) => (
           <li className={styles.item} key={text}>
-            <Link className={styles.link} to={link}>{text}</Link>
+            {
+              link !== path ? (
+                <Link className={styles.link} to={link}>{text}</Link>
+              ) : (
+                <p className={styles.last_link}>{text}</p>
+              )
+            }
           </li>
         ))}
       </ul>
